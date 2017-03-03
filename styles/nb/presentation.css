@@ -1,0 +1,49 @@
+body {
+	height: auto;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+main {
+	text-align: center;
+}
+iframe {
+	margin: 0 auto;
+	max-width: 300px;
+	max-height: 200px;
+}
+
+@media only screen and (min-width: 460px) {
+
+iframe {
+	max-width: 400px;
+	max-height: 300px;
+}
+
+}
+
+@media only screen and (min-width: 680px) {
+
+iframe {
+	max-width: 600px;
+	max-height: 400px;
+}
+
+}
+
+@media only screen and (min-width: 780px) {
+
+iframe {
+	max-width: 700px;
+	max-height: 600px;
+}
+
+}
+
+@media only screen and (min-width: 980px) {
+
+iframe {
+	max-width: none;
+	max-height: none;
+}
+
+}

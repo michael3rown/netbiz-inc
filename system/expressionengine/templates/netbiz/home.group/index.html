@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+{exp:channel:entries channel="interim_default_content" dynamic="no" limit="1" disable="categories|member_data|pagination" url_title="{if last_segment != ''}{last_segment}{/if}{if last_segment == ''}home{/if}"}
+	{if no_results}
+		{redirect="404"}
+	{/if}
+<head>
+
+{s-gbl-meta}
+{s-nb-meta}
+{s-gbl-styles}
+{s-nb-styles}
+{s-gbl-scripts-head}
+{s-nb-scripts-head}
+
+</head>
+<body class="page-{url_title} {if i_hero_type == "fullscreen"}fullscreen{/if}">
+
+{v-nb-tagmanager}
+<header>
+{s-nb-header}
+{s-nb-hero}
+</header>
+<main role="main">
+	{if url_title == "contact"}{s-nb-contactform}{/if}
+	{i_content}
+	{if url_title == "local-listings-scan-contact"}{s-nb-localsearchform}{/if}
+</main>
+<footer>
+{s-nb-socialmedia}
+{s-nb-affiliation}
+{s-nb-footer}
+</footer>
+<div id="contact-overlay"></div>
+{s-gbl-scripts}
+{s-nb-scripts}
+
+</body>
+{/exp:channel:entries}
+</html>

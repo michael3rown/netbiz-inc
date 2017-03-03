@@ -1,0 +1,45 @@
+#contact-form { background-color: #f8f9fb; }
+
+.page-contact iframe[src^="https://maps.google.com/maps"] {
+	width: 100%;
+}
+
+/* specific heroes */
+
+.page-contact .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/contact.jpg);
+}
+
+@media only screen and (min-width: 480px) {
+
+.page-contact .hero-pic { background-image: url(/images/uploads/netbiz_hero/contact_480.jpg); }
+
+}
+
+@media only screen and (min-width: 680px) {
+
+.page-contact .hero-pic { background-image: url(/images/uploads/netbiz_hero/contact_660.jpg); }
+
+}
+
+@media only screen and (min-width: 710px) {
+
+.page-contact iframe[src^="https://maps.google.com/maps"] {
+	width: 708px;
+	height: 398px;
+}
+
+}
+
+@media only screen and (min-width: 780px) {
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.page-contact .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/contact_960.jpg);
+	background-position: center bottom;
+}
+
+}

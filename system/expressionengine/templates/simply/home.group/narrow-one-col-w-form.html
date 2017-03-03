@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{exp:channel:entries channel="narrow_one_column_page_w_form" dynamic="no" limit="1" disable="categories|member_data|pagination" url_title="{last_segment}"}
+
+	<head>
+		
+{s-simply-head-meta}
+		
+		<meta name="description" content="{1_col_form_meta_description}" />
+		
+{s-simply-head-favicons}
+		
+		<title>{if 1_col_form_meta_title}{1_col_form_meta_title}{if:else}{title} | {simply-white-label-ppc}{/if}</title>
+		
+{s-simply-head-includes}
+		
+	</head>
+	
+	<body id="top-of-page" class="{url_title}">
+		
+		{s-simply-tag-manager}
+		
+{s-simply-body-header}
+		
+		<!-- Main -->
+		<main class="narrow-one-col-w-form text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+						<h2>{title}</h2>
+						{1_col_form_content}
+						{if 1_col_form_form == 'None'}
+						{if:elseif 1_col_form_form == 'Contact Us'}{s-simply-form-contact-us}
+						{if:elseif 1_col_form_form == 'Pricing Guide'}{s-simply-form-pricing-guide}
+						{if:elseif 1_col_form_form == 'Agency Partner Guide'}{s-simply-form-agency-partner-guide}
+						{if:elseif 1_col_form_form == 'How-To Guide to Reselling'}{s-simply-form-how-to-guide-to-reselling}
+						{/if}
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- /Main -->
+		
+{s-simply-body-footer}
+		
+{s-simply-body-includes}
+	
+	</body>
+
+{/exp:channel:entries}
+
+</html>

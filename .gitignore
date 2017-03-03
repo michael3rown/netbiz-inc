@@ -1,0 +1,22 @@
+# Standard ignores
+.DS_Store
+.localized
+Thumbs.db
+
+# Ignore .htaccess to avoid environment issues
+/.htaccess
+
+# Ignore database settings
+system/expressionengine/config/database.php
+system/expressionengine/config/config.php
+
+# Ignore caches
+*/expressionengine/cache/*
+sized/
+thumbs/
+_thumbs/
+
+# Ignore system images
+images/avatars/default_set/
+images/captchas/
+images/smileys/

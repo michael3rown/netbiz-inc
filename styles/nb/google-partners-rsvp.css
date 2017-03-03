@@ -1,0 +1,49 @@
+#greeting {
+	background-color: #3273de;
+	background: -webkit-gradient(linear, center top, center bottom, from(#4285f4), to(#3273de));
+	background: -webkit-linear-gradient(#4285f4, #3273de);
+	background: linear-gradient(#4285f4, #3273de);
+	color: #ffffff;
+}
+#greeting h1 { color: #ffffff; }
+
+.speaker-name {
+	margin-bottom: 0.5em;
+	font-size: 1.2em;
+}
+.speaker-title {
+	margin: 0.5em 0;
+	font-size: 0.8em;
+	font-style: italic;
+}
+.speaker-motto {
+	margin: 0.5em 0;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+.speaker-bio {
+
+}
+
+#rsvp-form {
+	background: #f8f9fb;
+}
+
+@media only screen and (min-width: 780px) {
+
+.content .col-3 {
+	text-align: center;
+}
+.speaker-motto {
+	min-height: 2.8em;
+}
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.content .col-3 {
+	width: 216px;
+}
+
+}

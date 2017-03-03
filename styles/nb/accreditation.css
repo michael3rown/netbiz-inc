@@ -1,0 +1,36 @@
+/* Page Specific - Hero Styles */
+
+.page-accreditation .hero-pic { background-image: url(/images/uploads/netbiz_hero/accreditation.jpg); }
+
+@media only screen and (min-width: 680px) {
+	.page-accreditation .hero-pic { background-image: url(/images/uploads/netbiz_hero/accreditation_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-accreditation .hero-pic { background-image: url(/images/uploads/netbiz_hero/accreditation_760.jpg); }
+
+	.page-accreditation .hero-txt {
+		background-color: rgba(22,66,2,0.65);
+		background: -webkit-linear-gradient(left, rgba(22,66,2,0.65) 0%, rgba(22,66,2,0.65) 33%, rgba(22,66,2,0) 100%);
+		background: linear-gradient(to right, rgba(22,66,2,0.65) 0%, rgba(22,66,2,0.65) 33%, rgba(22,66,2,0) 100%);
+		color: #fff;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-accreditation .hero-pic { background-image: url(/images/uploads/netbiz_hero/accreditation_960.jpg); }
+}
+
+/* Page Specific - Section Styles */
+
+#overview {
+	background-color: #006495;
+	background: -webkit-linear-gradient(top, #006495 0%,#00547d 90%);
+	background: linear-gradient(to bottom,  #006495 0%,#00547d 90%);
+	color: #ffffff;
+}
+		#overview h2 { color: #ffffff; }
+#pitch {}
+	.content a { display: block; margin: 2.15em 0 1.85em; }
+	#pitch h4 { color: #474f54; }
+	.learn-more a { margin-top: 1.45em; }

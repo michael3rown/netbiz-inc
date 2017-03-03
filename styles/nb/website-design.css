@@ -1,0 +1,48 @@
+/* Page Specific - Hero Styles */
+
+.page-website-design .hero-pic { background-image: url(/images/uploads/netbiz_hero/website-design.jpg); }
+
+@media only screen and (min-width: 480px) {
+	.page-website-design .hero-pic { background-image: url(/images/uploads/netbiz_hero/website-design_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-website-design .hero-pic { background-image: url(/images/uploads/netbiz_hero/website-design_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-website-design .hero-txt {
+		background-color: rgba(33,98,145,0.65);
+		background: -webkit-linear-gradient(left, rgba(33,98,145,0.65) 0%, rgba(33,98,145,0.65) 33%, rgba(33,98,145,0) 100%);
+		background: linear-gradient(to right, rgba(33,98,145,0.65) 0%, rgba(33,98,145,0.65) 33%, rgba(33,98,145,0) 100%);
+		color: #ffffff;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-website-design .hero-pic { background-image: url(/images/uploads/netbiz_hero/website-design_960.jpg); }
+}
+
+/* Page Specific - Section Styles */
+
+.row h3 { color: #748c3e; }
+#overview {
+	background-color: #849167;
+	background: -webkit-linear-gradient(top, #849167, #5b693c);
+	background: linear-gradient(to bottom, #849167, #5b693c);
+	color: #ffffff;
+	padding: 0;
+}
+	#overview .inner {
+		background-color: transparent;
+		background-position: 50% 2.5em;
+		background-repeat: no-repeat;
+		background-image: url(/images/uploads/netbiz_content/website-design-overview-bkgd.png);
+		padding-top: 3.375em;
+		padding-bottom: 3.125em;
+	}
+		#overview h2 { color: #ffffff; }
+#mobile-and-tablet-solutions-summary { background-color: #f8f9fb; padding-bottom: 0; }
+#custom-websites-summary {}
+#semi-custom-websites-summary { background-color: #f8f9fb; }
+#our-designers-summary {}

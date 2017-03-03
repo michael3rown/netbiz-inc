@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{!-- Page Specific Metadata --}
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		
+		<title>netbiz | Home</title>
+		{!-- /Page Specific Metadata --}
+		
+		<link rel="icon" type="image/png" href="/images/uploads/netbiz_interface/favicon.png" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" media="screen" href="{stylesheet='michael/core'}" />
+		<link rel="stylesheet" type="text/css" media="screen" href="{stylesheet='styles/{if last_segment != ''}{last_segment}{if:else}home{/if}'}" />
+	
+	</head>
+	
+	<body id="{if last_segment != ''}{last_segment}{if:else}home{/if}">
+		
+		{!-- Google Tag Manager
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXX');</script>
+		/Google Tag Manager --}
+		
+		{!-- Header --}
+		<header>
+			{!-- Page Title/Sub-Title
+			<div class="ttl-wrap"></div>
+			--}
+			{!-- Scroll-to-Fixed Navigation Bar --}
+			<div class="clearfix nav-wrap">
+				{!-- Logo --}
+				<div class="logo"></div>
+				{!-- Main Navigation --}
+				<nav class="main">
+					<ul>
+						<li><a>What We Do</a></li>
+						<li><a>Our Work</a></li>
+						<li><a>Meet NetBiz</a></li>
+						<li><a>Choosing an Agency</a></li>
+						<li><a>Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		{!-- /Header --}
+		
+		{!-- Content --}
+		<div class="content">
+			[Content]
+		</div>
+		{!-- /Content --}
+		
+		{!-- Footer --}
+		<footer>[Footer]</footer >
+		{!-- /Footer --}
+		
+		{!-- Scripts --}
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="{path='lib/{if last_segment != ''}{last_segment}{if:else}home{/if}'}"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var headerHeight, headerBarHeight, scrollTop;
+				
+				var resizeHeight = function() {
+					headerHeight = $(window).height();
+					headerBarHeight = (headerHeight-80);
+					$("header").css('height',(headerHeight));
+					$('.nav-wrap').css('top',(headerBarHeight));
+				};
+				
+				var fixedTop = function() {
+					scrollTop = $(window).scrollTop();
+					if (scrollTop > headerBarHeight) {
+		    			$('.nav-wrap').css({
+		    				'position': 'fixed',
+		    				'top': '0'
+		    			}).addClass('fixed-to-top');
+					} else {
+		    			$('.nav-wrap').css({
+		    				'position': '',
+		    				'top': (headerBarHeight)
+		    			}).removeClass('fixed-to-top');
+					}
+				};
+				
+				var scrollFixed = function() {
+					resizeHeight();
+					fixedTop();
+				}
+				
+				scrollFixed();
+				
+				$(window).scroll(function() {
+		    		fixedTop();
+				}).resize(scrollFixed);
+			});
+		</script>
+		
+		{!-- /Scripts --}
+    
+	</body>
+
+</html>

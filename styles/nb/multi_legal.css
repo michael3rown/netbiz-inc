@@ -1,0 +1,124 @@
+.legal-row {
+	text-align: left;
+	line-height: 1.4;
+}
+
+.legal-list {
+	margin: 10px 0;
+	padding: 0;
+	list-style: decimal outside;
+}
+.legal-list ol {
+	margin: 4px 0;
+	padding: 0;
+	list-style: lower-alpha outside;
+}
+.legal-list li {
+	margin: 8px 0 8px 30px;
+	padding: 0;
+}
+.legal-list ol ol {
+	margin: 4px 0;
+	padding: 0;
+	list-style: lower-roman outside;
+}
+.legal-list ol ol ol {
+	margin: 4px 0;
+	padding: 0;
+	list-style: decimal outside;
+	counter-reset: list;
+}
+.legal-list ol ol ol li {
+	position: relative;
+	list-style: none;
+}
+.legal-list ol ol ol li:before {
+	position: absolute;
+	top: 0;
+	right: 100%;
+	margin-right: 1em;
+	content: "(" counter(list, decimal) ") ";
+	counter-increment: list;
+	text-align: right;
+}
+.legal-list ol ol ol ol {
+	margin: 4px 0;
+	padding: 0;
+	list-style: lower-alpha outside;
+}
+.legal-list ol ol ol ol li {
+	position: relative;
+	list-style: none;
+}
+.legal-list ol ol ol ol li:before {
+	position: absolute;
+	top: 0;
+	right: 100%;
+	margin-right: 1em;
+	content: "(" counter(list, lower-alpha) ") ";
+	counter-increment: list;
+	text-align: right;
+}
+
+#legal-quick-row {
+	background-color: #384e65;
+	background: -webkit-gradient(linear, center top, center bottom, from(#384e65), to(#1d2c3c));
+	background: -webkit-linear-gradient(#384e65, #1d2c3c);
+	background: linear-gradient(#384e65, #1d2c3c);
+	color: #ffffff;
+}
+#legal-quick-row label {
+	font-size: 1.75em;
+	line-height: 1.2;
+	color: #ffffff;
+}
+#legal-quick-row label span {
+	display: block;
+}
+#legal-quick-nav {
+	max-width: 100%;
+	margin: 1em auto;
+	padding: 0.2em;
+	font-size: 0.5em;
+	color: #000000;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* specific heroes */
+
+.page-legal .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/legal.jpg);
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 680px) {
+
+.page-legal .hero-pic { background-image: url(/images/uploads/netbiz_hero/legal_660.jpg); }
+
+}
+
+@media only screen and (min-width: 780px) {
+
+.page-legal .hero-pic { background-image: url(/images/uploads/netbiz_hero/legal_760.jpg); }
+
+.page-legal .hero-txt {
+	background: #32404f;
+	background: rgba(50, 64, 79, 0.9);
+	background: -webkit-gradient(linear, center left, center right, from(rgba(50, 64, 79, 0.9)), to(rgba(50, 64, 79, 0)));
+	background: -webkit-linear-gradient(left, rgba(50, 64, 79, 0.9), rgba(50, 64, 79, 0));
+	background: linear-gradient(to right, rgba(50, 64, 79, 0.9), rgba(50, 64, 79, 0));
+	color: #ffffff;
+}
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.page-legal .hero-pic { background-image: url(/images/uploads/netbiz_hero/legal_960.jpg); }
+
+}

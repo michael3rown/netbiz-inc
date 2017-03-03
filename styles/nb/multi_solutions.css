@@ -1,0 +1,64 @@
+main .row {
+	background-color: #f8f9fb;
+	border-top: 0;
+}
+main .row:first-child {
+	background-color: #ffffff;
+	border-top: 0.7em solid #ffffff;
+}
+main .row:last-child {
+	background-color: #ffffff;
+	border-top: 0.7em solid #ffffff;
+}
+
+.slide {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.slide:nth-child(1) {
+	padding-top: 3.125em;
+	padding-bottom: 3.375em;
+}
+.slide:nth-child(2) {
+	padding-top: 3.125em;
+}
+.slide:last-child {
+	padding-bottom: 3.375em;
+}
+
+.nav-prev:before {
+	content: "\003c\00a0";
+}
+.nav-next:after {
+	content: "\00a0\003e";
+}
+
+/* specific heroes */
+
+.page-solutions .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/our-work.jpg);
+}
+
+@media only screen and (min-width: 480px) {
+
+.page-solutions .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-work_480.jpg); }
+
+}
+
+@media only screen and (min-width: 680px) {
+
+.page-solutions .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-work_660.jpg); }
+
+}
+
+@media only screen and (min-width: 780px) {
+
+
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.page-solutions .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-work_960.jpg); }
+
+}

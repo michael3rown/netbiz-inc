@@ -1,0 +1,78 @@
+ul.bulletpoints {
+	margin: 1em auto;
+	padding: 0;
+	list-style: none;
+}
+ul.bulletpoints li {
+	margin: 1em auto;
+	padding: 0;
+	text-align: center;
+}
+
+#contact-form {
+	padding-top: 0;
+	background: #ffffff;
+}
+
+#contact-form input#contact-rep-no,
+#contact-form input#contact-rep-yes,
+#contact-form-short input#contact-rep-no,
+#contact-form-short input#contact-rep-yes {
+	margin: 0.5em;
+}
+#contact-rep-namer {
+	display: none;
+	text-align: right;
+}
+#contact-form input#contact-rep-yes:checked ~ #contact-rep-namer,
+#contact-form-short input#contact-rep-yes:checked ~ #contact-rep-namer {
+	display: block;
+}
+
+/* Page Specific - Hero Styles */
+
+.page-local-listings-scan-contact .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan-contact.jpg); }
+
+@media only screen and (min-width: 480px) {
+	.page-local-listings-scan-contact .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan-contact_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-local-listings-scan-contact .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan-contact_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-local-listings-scan-contact .hero-txt {
+		background: #96aecd;
+		background: rgba(150, 174, 205, 0.9);
+		background: -webkit-gradient(linear, center left, center right, from(rgba(150, 174, 205, 0.9)), to(rgba(150, 174, 205, 0)));
+		background: -webkit-linear-gradient(left, rgba(150, 174, 205, 0.9), rgba(150, 174, 205, 0));
+		background: linear-gradient(to right, rgba(150, 174, 205, 0.9), rgba(150, 174, 205, 0));
+		color: #000000;
+	}
+
+	#contact-form input#contact-rep-no,
+	#contact-form label[for="contact-rep-no"],
+	#contact-form input#contact-rep-yes,
+	#contact-form label[for="contact-rep-yes"],
+	#contact-form-short input#contact-rep-no,
+	#contact-form-short label[for="contact-rep-no"],
+	#contact-form-short input#contact-rep-no,
+	#contact-form-short label[for="contact-rep-yes"] {
+		float: left;
+		margin: 0 0.5em 0 0;
+	}
+	#contact-form input#contact-rep-no,
+	#contact-form input#contact-rep-yes,
+	#contact-form-short input#contact-rep-no,
+	#contact-form-short input#contact-rep-yes {
+		margin: 0.2em 0.5em 0.2em 0;
+	}
+	#contact-pref-namer {
+		float: right;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-local-listings-scan-contact .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan-contact_960.jpg); }
+}

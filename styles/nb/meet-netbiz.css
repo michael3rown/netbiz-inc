@@ -1,0 +1,54 @@
+main figure { margin: 2em auto; }
+
+#our-mission {
+	background-color: #b56641;
+	background: -webkit-gradient(linear, center top, center bottom, from(#b56641), to(#99472d));
+	background: -webkit-linear-gradient(#b56641, #99472d);
+	background: linear-gradient(#b56641, #99472d);
+	color: #ffffff;
+}
+#our-mission h2 { color: #ffffff; }
+
+#our-approach { background-color: #f8f9fb; }
+
+#our-commitment { background-color: #f8f9fb; }
+#our-commitment .inner {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+#our-commitment .inner:first-child {
+	margin-top: 0;
+}
+#our-commitment .inner:last-child {
+	margin-bottom: 0;
+}
+
+/* specific heroes */
+
+.page-meet-netbiz .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/meet-netbiz.jpg);
+}
+
+@media only screen and (min-width: 480px) {
+
+.page-meet-netbiz .hero-pic { background-image: url(/images/uploads/netbiz_hero/meet-netbiz_480.jpg); }
+
+}
+
+@media only screen and (min-width: 680px) {
+
+.page-meet-netbiz .hero-pic { background-image: url(/images/uploads/netbiz_hero/meet-netbiz_660.jpg); }
+
+}
+
+@media only screen and (min-width: 780px) {
+
+
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.page-meet-netbiz .hero-pic { background-image: url(/images/uploads/netbiz_hero/meet-netbiz_960.jpg); }
+
+}

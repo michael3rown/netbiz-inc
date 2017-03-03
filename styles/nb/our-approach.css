@@ -1,0 +1,40 @@
+main figure { margin: 2em auto; }
+
+#meet-the-whole-team { margin: 2em auto; }
+
+#overview {
+	background-color: #ca5a6a;
+	background: -webkit-gradient(linear, center top, center bottom, from(#ca5a6a), to(#94414d));
+	background: -webkit-linear-gradient(#ca5a6a, #94414d);
+	background: linear-gradient(#ca5a6a, #94414d);
+	color: #ffffff;
+}
+#overview h2 { color: #ffffff; }
+
+/* specific heroes */
+
+.page-our-approach .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/our-approach.jpg);
+}
+
+@media only screen and (min-width: 480px) {
+
+.page-our-approach .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-approach_480.jpg); }
+
+}
+
+@media only screen and (min-width: 680px) {
+
+.page-our-approach .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-approach_660.jpg); }
+
+}
+
+@media only screen and (min-width: 780px) {
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.page-our-approach .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-approach_960.jpg); }
+
+}

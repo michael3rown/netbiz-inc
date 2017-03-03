@@ -1,0 +1,170 @@
+<?php
+
+# Do AdWords Stuff
+    require_once getcwd() . '/libs/Google/autoload.php';
+
+$oClient = new Google_Client();
+$oClient->setClientId('944786813080-qthio2j9k7ehtj389qpik2119iq2h6fg.apps.googleusercontent.com');
+$oClient->setClientSecret('VtGrXolh0wIoF5Ghh9rA53R1');
+$oClient->setApprovalPrompt('force');
+$oClient->setAccessType('offline');
+$oClient->setRedirectUri('https:{current_url}/evaluation-thank-you');
+$oClient->addScope('https://www.googleapis.com/auth/adwords');
+
+$depth = './';
+define('SRC_PATH', getcwd() . '/libs/');
+define('LIB_PATH', 'Google/Api/Ads/AdWords/Lib');
+define('UTIL_PATH', 'Google/Api/Ads/Common/Util');
+define('ADWORDS_UTIL_PATH', 'Google/Api/Ads/AdWords/Util');
+
+define('ADWORDS_VERSION', 'v201609');
+
+// Configure include path
+ini_set('include_path', implode(array(
+ini_get('include_path'), PATH_SEPARATOR, SRC_PATH
+)));
+
+// Include the AdWordsUser
+require_once LIB_PATH . '/AdWordsUser.php';
+
+?>
+
+<!DOCTYPE HTML>
+<html class="no-js">
+{exp:channel:entries channel="interim_default_content" dynamic="no" limit="1" disable="categories|member_data|pagination" url_title="{if last_segment != ''}{last_segment}{/if}{if last_segment == ''}home{/if}"}
+	{if no_results}
+		{redirect="404"}
+	{/if}
+<head>
+
+{s-gbl-meta}
+{s-nb-meta}
+{s-gbl-styles}
+{s-nb-styles}
+<style>
+	@media only screen and (min-width: 680px) { main { padding-top: 80px; } }
+</style>
+
+{s-gbl-scripts-head}
+{s-nb-scripts-head}
+
+</head>
+
+<body class="page-{url_title} {if i_hero_type == "fullscreen"}fullscreen{/if}">
+
+{v-nb-tagmanager}
+<header>
+{s-nb-land-no-nav}
+{s-nb-hero}
+</header>
+<main role="main">
+	<div class="row" id="intro">
+		<div class="wrapper">
+			<div class="inner">
+				<h1>Save 20-45% on Your Search Marketing<br /> with an AdWords Audit.</h1>
+				<div class="col-wrap" id="intro-2-col">
+					<div class="col-2" id="intro-left">
+						<h4>We'll evaluate your account performance and identify areas for improvement.</h4>
+						<p>We'll look at the key performance factors in your ad account to give you the insights necessary to increase your ROI on Google. Our review will help you identify inefficiencies and provide direction for:</p>
+						<ul>
+							<li>Low quality scores</li>
+							<li>Real vs. expected CTR’s</li>
+							<li>Long-Tail Keyword opportunities</li>
+							<li>Landing Page Optimization</li>
+							<li>And much more . . .</li>
+						</ul>
+						<div class="button"><a class="vibrant-green" href="<?= $oClient->createAuthUrl(); ?>">Get My Review</a></div>
+					</div>
+					<div class="col-2" id="intro-right">
+						<figure><img src="/images/uploads/netbiz_content/land-adaudit-intro-ipad.png" /></figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="steps">
+		<div class="inner">
+	 		<div class="col-wrap" id="steps-3-col">
+	 	 		<div class="col-3" id="steps-left">
+	 	 			<a href="<?= $oClient->createAuthUrl(); ?>"><figure><img src="/images/uploads/netbiz_content/land-adaudit-steps-one.png" /></figure></a>
+	 	 	 		<h4><b>1:</b> Log In to Google</h4>
+	 	 	 		<p>If you have multiple Google accounts, make sure that you’re logging into the account with AdWords.</p>
+	 	 		</div>
+				<div class="col-3" id="steps-center">
+					<a href="<?= $oClient->createAuthUrl(); ?>"><figure><img src="/images/uploads/netbiz_content/land-adaudit-steps-two.png" /></figure></a>
+					<h4><b>2:</b> Confirm Secure Access</h4>
+					<p>We'll only use this access to perform your AdWords account review. No changes will be made.</p>
+				</div>
+				<div class="col-3" id="steps-right">
+					<figure><img src="/images/uploads/netbiz_content/land-adaudit-steps-three.png" /></figure>
+					<h4><b>3:</b> Set Your Appointment</h4>
+					<p>In 1-2 days we'll have some great AdWords account insights to share. Let us know when it's good time to talk.</p>
+				</div>
+			</div>
+			<div class="button"><a class="vibrant-green" href="<?= $oClient->createAuthUrl(); ?>">It's Easy. Get Started Now.</a></div>
+		</div>
+	</div>
+	<div class="row" id="secure">
+		<div class="inner">
+			<div class="content">
+				<h2>Secure and Safe Account Review</h2>
+				<p>As a Google Certified Partner {netbiz} has helped over 80,000 businesses find success with search marketing. An A+ Rating with the BBB is a testament of our commitment to client success. As a highly rated company and Google Certified Partner we’re able to access your account through Google’s secure API and provide actionable insights into the performance of your search marketing campaigns.</p>
+			</div>
+			<div class="col-wrap" id="secure-3-col">
+				<div class="col-3" id="secure-left">
+					<script src="https://apis.google.com/js/platform.js"></script><div class="g-partnersbadge" data-agency-id="2772174654"></div>
+				</div>
+				<div class="col-3" id="secure-center">
+					{v-nb-bbb}
+				</div>
+				<div class="col-3" id="secure-right">
+					<a href="{v-nb-bingadsaccredited}"><img src="/images/uploads/netbiz_content/Bing-SMB_AuthorizedReseller_Badge_h_rgb_r.png" alt=""></a>
+				</div>
+			</div>
+	 		<div class="button"><a class="vibrant-green" href="<?= $oClient->createAuthUrl(); ?>">Provide Secure Access to My Account</a></div>
+			<p class="fine-print">We will never share your Google AdWords data for any reason (<a href="/legal/privacy-policy">Privacy Policy</a>).</p>
+		</div>
+	</div>
+	<div class="row" id="insights">
+		<div class="inner">
+			<div class="content">
+				<h2>Search Marketing Performance Insights, from qualified Google experts, for Free.</h2>
+				<p>Your review will include detailed info on how you can optimize your AdWords campaign for peak performance. Looking for greater ROI from your search marketing? Get your <b>Free review</b> today.</p>
+			</div>
+			<div class="col-wrap" id="insights-3-col-top">
+				<div class="col-3" id="insights-top-left">
+					<figure><img src="/images/uploads/netbiz_content/land-adaudit-insights-top-left.png" /></figure>
+				</div>
+				<div class="col-3" id="insights-top-center">
+					<figure><img src="/images/uploads/netbiz_content/land-adaudit-insights-top-center.png" /></figure>
+				</div>
+				<div class="col-3" id="insights-top-right">
+					<figure><img src="/images/uploads/netbiz_content/land-adaudit-insights-top-right.png" /></figure>
+				</div>
+			</div>
+			<div class="col-wrap" id="insights-3-col-bottom">
+				<div class="col-3" id="insights-bottom-left">
+					<figure><img src="/images/uploads/netbiz_content/land-adaudit-insights-bottom-left.png" /></figure>
+				</div>
+				<div class="col-3" id="insights-bottom-center">
+					<figure><img src="/images/uploads/netbiz_content/land-adaudit-insights-bottom-center.png" /></figure>
+				</div>
+				<div class="col-3" id="insights-bottom-right">
+					<figure><img src="/images/uploads/netbiz_content/land-adaudit-insights-bottom-right.png" /></figure>
+				</div>
+			</div>
+			<div class="button"><a class="vibrant-green" href="<?= $oClient->createAuthUrl(); ?>">Improve My ROI</a></div>
+		</div>
+	</div>
+</main>
+<footer>
+{s-nb-land-footer-blue-bar}
+{s-nb-footer}
+</footer>
+<div id="contact-overlay"></div>
+{s-gbl-scripts}
+{s-nb-scripts}
+
+</body>
+{/exp:channel:entries}
+</html>

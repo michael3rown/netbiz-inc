@@ -1,0 +1,49 @@
+/* Page Specific - Hero Styles */
+
+.page-video-production .hero-pic { background-image: url(/images/uploads/netbiz_hero/video-production.jpg); }
+
+@media only screen and (min-width: 480px) {
+	.page-video-production .hero-pic { background-image: url(/images/uploads/netbiz_hero/video-production_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-video-production .hero-pic { background-image: url(/images/uploads/netbiz_hero/video-production_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-video-production .hero-txt {
+		background-color: rgba(24,26,19,0.65);
+		background: -webkit-linear-gradient(left, rgba(24,26,19,0.65) 0%, rgba(24,26,19,0.65) 33%, rgba(24,26,19,0) 100%);
+		background: linear-gradient(to right, rgba(24,26,19,0.65) 0%, rgba(24,26,19,0.65) 33%, rgba(24,26,19,0) 100%);
+		color: #ffffff;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-video-production .hero-pic { background-image: url(/images/uploads/netbiz_hero/video-production_960.jpg); }
+}
+
+/* Page Specific - Section Styles */
+
+.row h3 { color: #0a2433; }
+.row iframe { margin-top: 1.125em; }
+#overview {
+	background-color: #56477c;
+	background: -webkit-linear-gradient(top, #56477c, #33184c);
+	background: linear-gradient(to bottom, #56477c, #33184c);
+	color: #ffffff;
+	padding: 0;
+}
+	#overview .inner {
+		background-color: transparent;
+		background-position: 50% 2.5em;
+		background-repeat: no-repeat;
+		background-image: url(/images/uploads/netbiz_content/video-production-overview-bkgd.png);
+		padding-top: 3.375em;
+		padding-bottom: 3.125em;
+	}
+		#overview h2 { color: #ffffff; }
+#on-location-shoot-summary { background-color: #f8f9fb; }
+#tutorials-summary {}
+#post-production-summary { background-color: #f8f9fb; }
+#animation-summary {}

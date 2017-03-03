@@ -1,0 +1,62 @@
+/* page specific */
+
+#overview {
+	background: #036eac;
+	background: -webkit-gradient(linear, center top, center bottom, from(#036eac), to(#025687));
+	background: -webkit-linear-gradient(#036eac, #025687);
+	background: linear-gradient(#036eac, #025687);
+	color: #ffffff;
+}
+#overview h2 { color: #ffffff; }
+
+#listings-scan-form {
+	background: #f8f9fb;
+}
+
+#listings-scan-form .listings-scan-form .form-label-block {
+	font-size: 1em;
+	text-align: left;
+}
+#listings-scan-form .listings-scan-form .form-input-block {
+	font-size: 1em;
+	text-align: left;
+}
+
+/* Page Specific - Hero Styles */
+
+.page-local-listings-scan .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan.jpg); }
+
+@media only screen and (min-width: 480px) {
+	.page-local-listings-scan .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-local-listings-scan .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan_660.jpg); }
+
+	.listings-scan-form {
+		margin: 0 auto;
+		width: 400px;
+		min-width: 0;
+	}
+
+	.listings-scan-form input[type="submit"] {
+		display: inline-block;
+		width: 75%;
+		width: calc((302 / 960) / (400 / 960) * 100%);
+	}
+}
+
+@media only screen and (min-width: 780px) {
+	.page-local-listings-scan .hero-txt {
+		background: #d69b5c;
+		background: rgba(160, 158, 143, 0.9);
+		background: -webkit-gradient(linear, center left, center right, from(rgba(160, 158, 143, 0.9)), to(rgba(160, 158, 143, 0)));
+		background: -webkit-linear-gradient(left, rgba(160, 158, 143, 0.9), rgba(160, 158, 143, 0));
+		background: linear-gradient(to right, rgba(160, 158, 143, 0.9), rgba(160, 158, 143, 0));
+		color: #ffffff;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-local-listings-scan .hero-pic { background-image: url(/images/uploads/netbiz_hero/local-listings-scan_960.jpg); }
+}

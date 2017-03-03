@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+{exp:channel:entries channel="interim_default_content" dynamic="no" limit="1" disable="categories|member_data|pagination" url_title="{if last_segment != ''}{last_segment}{/if}{if last_segment == ''}home{/if}"}
+	{if no_results}
+		{redirect="404"}
+	{/if}
+<head>
+
+{s-gbl-meta}
+{s-nbl-meta}
+{s-gbl-styles}
+{s-nbl-styles}
+{s-gbl-scripts-head}
+{s-nbl-scripts-head}
+
+</head>
+<body class="page-{url_title} {if i_hero_type == "fullscreen"}fullscreen{/if}">
+
+{v-nbl-tagmanager}
+<header>
+{s-nbl-examples-header}
+{s-nbl-hero}
+</header>
+<main role="main">
+	{i_content}
+</main>
+<footer>
+{s-nbl-findanagent}
+{s-nbl-blank-footer}
+</footer>
+{s-gbl-scripts}
+{s-nbl-scripts}
+
+</body>
+{/exp:channel:entries}
+</html>

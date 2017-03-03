@@ -1,0 +1,15 @@
+/* Page Specific - Section Styles */
+
+.row h3 { color: #ed7627; }
+
+#search-advertising-summary {}
+	#search-advertising-summary img { margin: 0 auto; }
+	#google-article { font-size: 0.75em; margin-top: 2.75em; }
+		#google-article a { color: #999999 }
+		#google-article a:hover { color: #0a2433 }
+#display-advertising-summary { background-color: #f8f9fb; }
+	#display-advertising-summary iframe { margin-top: 1.125em; }
+/* #local-search-optimization-summary { padding-bottom: 0; } */
+
+#contact-form { background: #f8f9fb; }
+#contact-form h3 { color: #000000; }

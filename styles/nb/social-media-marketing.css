@@ -1,0 +1,47 @@
+/* Page Specific - Hero Styles */
+
+.page-social-media-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/social-media-marketing.jpg); }
+
+@media only screen and (min-width: 480px) {
+	.page-social-media-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/social-media-marketing_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-social-media-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/social-media-marketing_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-social-media-marketing .hero-txt {
+		background-color: rgba(196,192,187,0.65);
+		background: -webkit-linear-gradient(left, rgba(196,192,187,0.65) 0%, rgba(196,192,187,0.65) 33%, rgba(196,192,187,0) 100%);
+		background: linear-gradient(to right, rgba(196,192,187,0.65) 0%, rgba(196,192,187,0.65) 33%, rgba(196,192,187,0) 100%);
+		color: #1b1b1b;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-social-media-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/social-media-marketing_960.jpg); }
+}
+
+/* Page Specific - Section Styles */
+
+.row h3 { color: #3983da; }
+#overview {
+	background-color: #5ba6fd;
+	background: -webkit-linear-gradient(top, #5ba6fd, #296fc2);
+	background: linear-gradient(to bottom, #5ba6fd, #296fc2);
+	color: #ffffff;
+	padding: 0;
+}
+	#overview .inner {
+		background-color: transparent;
+		background-position: 50% 2.5em;
+		background-repeat: no-repeat;
+		background-image: url(/images/uploads/netbiz_content/social-media-marketing-overview-bkgd.png);
+		padding-top: 3.375em;
+		padding-bottom: 3.125em;
+	}
+		#overview h2 { color: #ffffff; }
+#branding-summary {}
+#community-building-summary { background-color: #f8f9fb; }
+#managed-content-summary {}

@@ -1,0 +1,42 @@
+/* Page Specific - Hero Styles */
+
+.page-what-we-do .hero-pic { background-image: url(/images/uploads/netbiz_hero/what-we-do.jpg); }
+
+@media only screen and (min-width: 480px) {
+	.page-what-we-do .hero-pic { background-image: url(/images/uploads/netbiz_hero/what-we-do_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-what-we-do .hero-pic { background-image: url(/images/uploads/netbiz_hero/what-we-do_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-what-we-do .hero-txt {
+		background-color: rgba(99,117,170,0.65);
+		background: -webkit-linear-gradient(left, rgba(99,117,170,0.65) 0%, rgba(99,117,170,0.65) 33%, rgba(99,117,170,0) 100%);
+		background: linear-gradient(to right, rgba(99,117,170,0.65) 0%, rgba(99,117,170,0.65) 33%, rgba(99,117,170,0) 100%);
+		color: #ffffff;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-what-we-do .hero-pic { background-image: url(/images/uploads/netbiz_hero/what-we-do_960.jpg); }
+}
+
+/* Page Specific - Section Styles */
+
+#overview {
+	background-color: #87b9c1;
+	background: -webkit-linear-gradient(top, #87b9c1, #346e7d);
+	background: linear-gradient(to bottom, #87b9c1, #346e7d);
+	color: #ffffff;
+}
+	#overview h2 { color: #ffffff; }
+#search-marketing-summary {}
+	#search-marketing-summary h2 { color: #ed7627; }
+#social-media-marketing-summary { background-color: #f8f9fb; padding-bottom: 0; }
+	#social-media-marketing-summary h2 { color: #0499ef; }
+#website-design-summary {}
+	#website-design-summary h2 { color: #748c3e; }
+#video-production-summary { background-color: #f8f9fb; }
+	#video-production-summary h2 { color: #7c45a6; }

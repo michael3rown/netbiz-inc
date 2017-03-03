@@ -1,0 +1,33 @@
+/*
+Page Specific Styles - Google AdWords Evaluation Thank You Landing Page
+*/
+
+.row {
+	background-color: rgba(248, 249, 251, 1);
+	border-top: none;
+}
+
+figure { margin: 0; }
+
+/* Intro Section */
+
+#intro {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(16, 59, 92, 1)), color-stop(25%, rgba(50, 92, 123, 1)), color-stop(80%, rgba(248, 249, 251, 1)), color-stop(100%, rgba(248, 249, 251, 1)));
+	background: -webkit-linear-gradient(top, rgba(16, 59, 92, 1) 0%, rgba(50, 92, 123, 1) 25%, rgba(248, 249, 251, 1) 80%, rgba(248, 249, 251, 1) 100%);
+	background: linear-gradient(to bottom, rgba(16, 59, 92, 1) 0%, rgba(50, 92, 123, 1) 25%, rgba(248, 249, 251, 1) 80%, rgba(248, 249, 251, 1) 100%);
+	padding-top: 0;
+	padding-bottom: 0;
+}
+	#intro .wrapper {
+		background: transparent url(/images/uploads/netbiz_content/land-adaudit-ty-intro-texture.png) repeat-x 0 0;
+		padding-top: 5.1em;
+		padding-bottom: 0;
+	}
+
+/* Text Section */
+
+#message {
+	padding-top: 1em;
+	padding-bottom: 2.2em;
+}
+	#message h4 { color: rgb(71, 79, 84); }

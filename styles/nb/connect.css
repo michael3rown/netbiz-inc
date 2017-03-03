@@ -1,0 +1,26 @@
+#greeting {
+	background-color: #0069ab;
+	background: -webkit-gradient(linear, center top, center bottom, from(#0082c8), to(#0069ab));
+	background: -webkit-linear-gradient(#0082c8, #0069ab);
+	background: linear-gradient(#0082c8, #0069ab);
+	color: #ffffff;
+}
+	#greeting h2 { color: #ffffff; }
+
+.content figure { margin-top: 0; margin-bottom: 2.5em }
+
+#rsvp-form {
+	background: #f8f9fb;
+}
+
+@media only screen and (min-width: 780px) {
+	.content .col-3 {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.content .col-3 {
+		width: 216px;
+	}
+}

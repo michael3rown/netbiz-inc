@@ -1,0 +1,164 @@
+/*
+Page Specific Styles - Google AdWords Evaluation Landing Page
+*/
+
+.content h2 { margin-bottom: 0; }
+.content p { margin-top: 0.6em; }
+
+.col-2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+figure { margin: 0; }
+
+.button { text-align: center; }
+	.button a {
+		display: inline-block;
+		max-width: 80%;
+		font-weight: bold;
+		font-size: 1.5em;
+		font-family: Arial, sans-serif;
+		text-decoration: none;
+		padding: 0.85em 1.3em 0.75em;
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		border-radius: 7px;
+		margin: 0 auto;
+	}
+	a.vibrant-green {
+		background: rgba(202, 236, 17, 1);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(202, 236, 17, 1)), color-stop(100%, rgba(157, 208, 2, 1)));
+		background: -webkit-linear-gradient(top, rgba(202, 236, 17, 1) 0%, rgba(157, 208, 2, 1) 100%);
+		background: linear-gradient(to bottom, rgba(202, 236, 17, 1) 0%, rgba(157, 208, 2, 1) 100%);
+		color: rgb(39, 50, 1);
+		text-shadow: 0 1px 0 rgba(202, 236, 17, 1);
+		-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+		-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+	}
+	.button a.vibrant-green:focus, .button a.vibrant-green:hover, .button a.vibrant-green:active {
+		background: rgb(215,248,35);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(215, 248, 35, 1)), color-stop(100%, rgba(169, 220, 13, 1)));
+		background: -webkit-linear-gradient(top, rgba(215, 248, 35, 1) 0%, rgba(169, 220, 13, 1) 100%);
+		background: linear-gradient(to bottom, rgba(215, 248, 35, 1) 0%, rgba(169, 220, 13, 1) 100%);
+	}
+
+/* Intro Section */
+
+#intro {
+	color: rgb(255,255,255);
+	background: rgba(16,59,92,1);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(16, 59, 92, 1)), color-stop(50%, rgba(34, 87, 128, 1)), color-stop(100%, rgba(167, 210, 242, 1)));
+	background: -webkit-linear-gradient(top, rgba(16, 59, 92, 1) 0%, rgba(34, 87, 128, 1) 50%, rgba(167, 210, 242, 1) 100%);
+	background: linear-gradient(to bottom, rgba(16, 59, 92, 1) 0%, rgba(34, 87, 128, 1) 50%, rgba(167, 210, 242, 1) 100%);
+	padding-top: 0;
+	padding-bottom: 0;
+	border-top: none;
+}
+	#intro .wrapper {
+		background: transparent url(/images/uploads/netbiz_content/land-adaudit-intro-texture.png) repeat-x 0 0;
+		padding-top: 3.2em;
+		padding-bottom: 2.4em;
+	}
+		#intro br { display: none; }
+		#intro h1, #intro h4, #intro p, #intro ul { color: rgb(255, 255, 255); }
+		#intro h4, #intro p, #intro ul { text-align: left; }
+		#intro figure { display: none; }
+		#intro-2-col { margin-top: 2.9em; }
+			#intro-left {}
+				#intro ul { font-style: italic; }
+				#intro-left .button { margin-top: 2.4em; }
+				#intro-left .button a {
+					max-width: 100%;
+					font-size: 1.875em;
+					padding-top: 0.6em;
+					padding-bottom: 0.5em;
+				}
+			#intro-right {}
+
+/* Steps Section */
+
+#steps {
+	background-color: rgb(248, 249, 251);
+	color: rgb(71, 79, 81);
+	padding-top: 5em;
+	padding-bottom: 3.3em;
+}
+	#steps h4, #steps p { color: rgb(71, 79, 81); }
+	#steps h4 {
+		margin-top: 0.5em;
+		margin-bottom: 0;
+	}
+	#steps p { margin-top: 0.6em; }
+	#steps-3-col {}
+		#steps .col-3 {
+			text-align: center;
+			margin-top: 3em;
+		}
+		#steps #steps-left { margin-top: 0.5em; }
+	#steps .button { margin-top: 1.1em; }
+
+/* Secure Section */
+
+#secure { padding-bottom: 2.2em; }
+	#secure-3-col { margin-top: 2.2em; }
+		#secure .col-3 {
+			text-align: center;
+			margin-top: 1.7em;
+		}
+		#secure #secure-left { margin-top: 0.5em; }
+			#secure .col-3 a {
+				display: inline-block;
+				margin: 0 auto;
+			}
+				#secure #secure-right img { height: 80px; }
+	#secure .button { margin-top: 2.1em; }
+	#secure .fine-print {
+		font-style: italic;
+		font-size: .75em;
+		margin-top: 1.6em;
+	}
+
+/* Insights Section */
+
+#insights {
+	background-color: rgb(248, 249, 251);
+	padding-bottom: 3.3em;
+}
+	#insights #insights-3-col-top { margin-top: 2.15em; }
+	#insights #insights-3-col-bottom { margin-top: -0.5em; }
+	#insights .button { margin-top: 2.25em; }
+
+/* Media Queries */
+
+@media only screen and (min-width: 780px) {
+
+ /* Intro Section */
+
+		 #intro figure { display: block; }
+				 #intro-left .button a { display: block; }
+			 #intro-right { padding-top: 1.1em; }
+
+ /* Steps Section */
+
+	 #steps h4 { margin-top: 1.3em; }
+		 #steps .col-3, #steps #steps-left { margin-top: 0; }
+
+ /* Secure Section */
+
+	#secure .col-3, #secure #secure-left { margin-top: 0; }
+
+ /* Insights Section */
+
+	 #insights #insights-3-col-bottom { margin-top: 1.25em; }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+ /* Intro Section */
+
+		 #intro br { display: block; }
+
+}

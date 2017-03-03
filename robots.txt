@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /thank-you
+Disallow: /presentation
+Disallow: /accreditation
+Disallow: /resources/local-listing-scan-contact
+Disallow: /resources/local-listing-scan-thank-you
+Disallow: /google-partners-rsvp
+Disallow: /google-partners-rsvp-contact
+Disallow: /google-partners-rsvp-thank-you
+
+Sitemap: https://www.netbiz.com/sitemap.xml

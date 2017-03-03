@@ -1,0 +1,51 @@
+#overview {
+	background-color: #8797a9;
+	background: -webkit-gradient(linear, center top, center bottom, from(#8797a9), to(#627488));
+	background: -webkit-linear-gradient(#8797a9, #627488);
+	background: linear-gradient(#8797a9, #627488);
+	color: #ffffff;
+}
+#overview h2 { color: #ffffff; }
+
+.page-our-work .row { background-color: #ffffff; }
+.page-our-work .row:nth-child(2n) { background-color: #f8f9fb; }
+
+.our-work-solution-link {
+	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+	color: #474f54;
+}
+.our-work-solution-logo {
+	margin: 1.5em auto;
+}
+
+/* specific heroes */
+
+.page-our-work .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/our-work.jpg);
+}
+
+@media only screen and (min-width: 480px) {
+
+.page-our-work .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-work_480.jpg); }
+
+}
+
+@media only screen and (min-width: 680px) {
+
+.page-our-work .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-work_660.jpg); }
+
+}
+
+@media only screen and (min-width: 780px) {
+
+
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.page-our-work .hero-pic { background-image: url(/images/uploads/netbiz_hero/our-work_960.jpg); }
+
+}

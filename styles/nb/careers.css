@@ -1,0 +1,55 @@
+main figure { margin: 2em auto; }
+
+#overview {
+	background-color: #eff5fa;
+	background: -webkit-gradient(linear, center top, center bottom, from(#eff5fa), to(#e2e9f0));
+	background: -webkit-linear-gradient(#eff5fa, #e2e9f0);
+	background: linear-gradient(#eff5fa, #e2e9f0);
+}
+
+#current-positions {
+	background-color: #f8f9fb;
+}
+#current-positions h3 {
+	margin-top: 2em;
+	padding-bottom: 0.5em;
+	border-bottom: 7px solid #c8c8c9;
+	color: #0a2433;
+}
+
+/* specific heroes */
+
+.page-careers .hero-pic {
+	background-image: url(/images/uploads/netbiz_hero/careers.jpg);
+}
+
+@media only screen and (min-width: 480px) {
+
+.page-careers .hero-pic { background-image: url(/images/uploads/netbiz_hero/careers_480.jpg); }
+
+}
+
+@media only screen and (min-width: 680px) {
+
+.page-careers .hero-pic { background-image: url(/images/uploads/netbiz_hero/careers_660.jpg); }
+
+}
+
+@media only screen and (min-width: 780px) {
+
+.page-careers .hero-txt {
+	background: #d69b5c;
+	background: rgba(214, 155, 92, 0.9);
+	background: -webkit-gradient(linear, center left, center right, from(rgba(214, 155, 92, 0.9)), to(rgba(214, 155, 92, 0)));
+	background: -webkit-linear-gradient(left, rgba(214, 155, 92, 0.9), rgba(214, 155, 92, 0));
+	background: linear-gradient(to right, rgba(214, 155, 92, 0.9), rgba(214, 155, 92, 0));
+	color: #ffffff;
+}
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.page-careers .hero-pic { background-image: url(/images/uploads/netbiz_hero/careers_960.jpg); }
+
+}

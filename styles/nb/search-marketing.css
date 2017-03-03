@@ -1,0 +1,55 @@
+/* Page Specific - Hero Styles */
+
+.page-search-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/search-marketing.jpg); }
+
+@media only screen and (min-width: 480px) {
+	.page-search-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/search-marketing_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-search-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/search-marketing_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-search-marketing .hero-txt {
+		background-color: rgba(122,66,21,0.65);
+		background: -webkit-linear-gradient(left, rgba(122,66,21,0.65) 0%, rgba(122,66,21,0.65) 33%, rgba(122,66,21,0) 100%);
+		background: linear-gradient(to right, rgba(122,66,21,0.65) 0%, rgba(122,66,21,0.65) 33%, rgba(122,66,21,0) 100%);
+		color: #ffffff;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.page-search-marketing .hero-pic { background-image: url(/images/uploads/netbiz_hero/search-marketing_960.jpg); }
+}
+
+/* Page Specific - Section Styles */
+
+.row h3 { color: #ed7627; }
+#overview {
+	background-color: #e38424;
+	background: -webkit-linear-gradient(top, #e38424, #cf6110);
+	background: linear-gradient(to bottom, #e38424, #cf6110);
+	color: #ffffff;
+	padding: 0;
+}
+	#overview .inner {
+		background-color: transparent;
+		background-position: 50% 2.5em;
+		background-repeat: no-repeat;
+		background-image: url(/images/uploads/netbiz_content/search-marketing-overview-bkgd.png);
+		padding-top: 3.375em;
+		padding-bottom: 3.125em;
+	}
+		#overview h2 { color: #ffffff; }
+#search-advertising-summary {}
+	#search-advertising-summary img { margin: 0 auto; }
+	#google-article { font-size: 0.75em; margin-top: 2.75em; }
+		#google-article a { color: #999999 }
+		#google-article a:hover { color: #0a2433 }
+#display-advertising-summary { background-color: #f8f9fb; }
+	#display-advertising-summary iframe { margin-top: 1.125em; }
+#local-search-optimization-summary { padding-bottom: 0; }
+#search-engine-optimization-summary { background-color: #f8f9fb; }
+#google-certified-analysts-summary {}
+	#google-certified-analysts-summary .content a img { display: block; margin: 2.1875em auto 2em; }

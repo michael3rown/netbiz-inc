@@ -1,0 +1,48 @@
+/* Page Specific - Section Styles */
+
+#our-approach-summary {
+	background-color: #b8c2c9;
+	background: -webkit-linear-gradient(top, #b8c2c9, #9aa7af);
+	background: linear-gradient(to bottom, #b8c2c9, #9aa7af);
+	color: #ffffff;
+}
+	#our-approach-summary h2 { color: #ffffff; }
+	#our-approach-summary .learn-more a:focus, #our-approach-summary .learn-more a:hover, #our-approach-summary .learn-more a:active { color: #9facb3; }
+
+#what-we-do-summary {}
+
+#our-work-summary {
+	background-color: #2782b0;
+	background: -webkit-linear-gradient(top, #2782b0 5%, #0c4071 40%, #0c4071 43%);
+	background: linear-gradient(to bottom, #2782b0 5%, #0c4071 40%, #0c4071 43%);
+	color: #ffffff;
+}
+	#our-work-summary h2 { color: #ffffff; }
+	#our-work-summary .learn-more a:focus, #our-work-summary .learn-more a:hover, #our-work-summary .learn-more a:active { color: #104a7b; }
+
+blockquote.testimonial {}
+	blockquote.testimonial .quote-txt { color: #474f54; }
+	blockquote.testimonial .quote-src { color: #0a2433; }
+
+#about-netbiz-summary { background-color: #f8f9fb; padding-bottom: 0; }
+
+/* Page Specific - Hero Styles */
+
+.page-home .hero-pic { background-image: url(/images/uploads/netbiz_hero/home.jpg); background-position: center top; background-size: auto; }
+
+@media only screen and (min-width: 480px) {
+	.page-home .hero-pic { background-image: url(/images/uploads/netbiz_hero/home_480.jpg); }
+}
+
+@media only screen and (min-width: 680px) {
+	.page-home .hero-pic { background-image: url(/images/uploads/netbiz_hero/home_660.jpg); }
+}
+
+@media only screen and (min-width: 780px) {
+	.page-home .hero-pic { background-position: center center; background-size: contain; }
+	.page-home .hero-txt { width: auto; padding: 2em; background: transparent; text-align: center; color: #0b0b09; }
+}
+
+@media only screen and (min-width: 980px) {
+	.page-home .hero-pic { background-image: url(/images/uploads/netbiz_hero/home_960.jpg); }
+}

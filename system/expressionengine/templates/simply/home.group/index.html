@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{exp:channel:entries channel="multi_section" dynamic="no" limit="1" disable="categories|member_data|pagination" url_title="home"}
+
+	<head>
+		
+{s-simply-head-meta}
+		
+		<meta name="description" content="{multi_section_meta_description}" />
+		
+{s-simply-head-favicons}
+		
+		<title>{if multi_section_meta_title}{multi_section_meta_title}{if:else}{simply-white-label-ppc}{/if}</title>
+		
+{s-simply-head-includes}
+		
+	</head>
+	
+	<body id="top-of-page" class="home">
+		
+		{s-simply-tag-manager}
+		
+{s-simply-body-header}
+		
+		<!-- /Hero/Video -->
+		<div id="hero-video" data-vide-bg="/video/coffee-cup" data-vide-options="className: video-container, posterType: jpg, position: 50% 100%, playbackRate: 1">
+			
+			<!-- Title/Subtitle -->
+			<div id="hero-video-title-subtitle">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-6 col-md-6 col-lg-6">
+							<h1>{multi_section_hero_title}</h1>
+							<h4>{multi_section_hero_subtitle}</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Title/Subtitle -->
+			
+			<!-- Email Bar -->
+			<div id="hero-video-email-bar">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-offset-1 col-xs-10 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+							<p id="email-bar-action-text">Get Started for Free</p>
+							{exp:freeform:form
+								form_name="get_started"
+								required="email"
+								inline_errors="yes"
+								inline_error_return="/" 
+								return="/contact-us"
+							}
+								<div class="input-group">
+									<span class="input-group-addon{if freeform:error:email} error{/if}">@</span>
+									{freeform:all_form_fields}
+									<input type="{freeform:field_type}" name="{freeform:field_name}" id="{freeform:field_id}" class="form-control" placeholder="email address" />
+									{/freeform:all_form_fields}
+									<span class="input-group-btn"><button type="submit" name="submit" class="btn btn-default"><span id="email-bar-short-button">Go</span><span id="email-bar-full-button">Get Started for Free</span></button></span>
+								</div>
+							{/exp:freeform:form}
+							<p class="email-bar-fine-print"><a href="{path='/privacy-policy'}">We promise not to share your information.</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Email Bar -->
+			
+		</div>
+		<!-- Hero/Video -->
+		
+		<!-- Main -->
+		<main>
+			{content_sections}
+			{if content_sections:channel_short_name == 'multi_section_text_image'}
+				{s-simply-multi-section-text-image}
+			{if:elseif content_sections:channel_short_name == 'multi_section_slideshow'}
+				{s-simply-multi-section-slideshow}
+			{if:elseif content_sections:channel_short_name == 'multi_section_faq'}
+				{s-simply-multi-section-faq}
+			{/if}
+			{/content_sections}
+		</main>
+		<!-- /Main -->
+		
+{s-simply-body-footer}
+		
+{s-simply-body-includes}
+<script src="/scripts/jquery.vide.min.js"></script>
+	
+	</body>
+
+{/exp:channel:entries}
+
+</html>

@@ -1,0 +1,193 @@
+<?php
+
+# Do AdWords Stuff
+require_once getcwd() . '/libs/Google/autoload.php';
+
+$oClient = new Google_Client();
+$oClient->setClientId('944786813080-qthio2j9k7ehtj389qpik2119iq2h6fg.apps.googleusercontent.com');
+$oClient->setClientSecret('VtGrXolh0wIoF5Ghh9rA53R1');
+$oClient->setApprovalPrompt('force');
+$oClient->setAccessType('offline');
+$oClient->setRedirectUri('https:{current_url}');
+$oClient->addScope('https://www.googleapis.com/auth/adwords');
+
+
+define('SRC_PATH', getcwd() . '/libs/');
+define('LIB_PATH', 'Google/Api/Ads/AdWords/Lib');
+define('UTIL_PATH', 'Google/Api/Ads/Common/Util');
+define('ADWORDS_UTIL_PATH', 'Google/Api/Ads/AdWords/Util');
+define('ADWORDS_VERSION', 'v201609');
+
+// Configure include path
+ini_set('include_path', implode(array(
+ini_get('include_path'), PATH_SEPARATOR, SRC_PATH
+)));
+
+// Include the AdWordsUser
+require_once LIB_PATH . '/AdWordsUser.php';
+
+$bAdWordsError = false;
+
+if (isset($_GET, $_GET['code'])) {
+    try {
+		// Get Refresh Token
+		$oClient->authenticate($_GET['code']);
+
+		$sClientRefreshToken = $oClient->getRefreshToken();
+
+		
+		// Log in as Client
+		$oAdWordsUser = new AdWordsUser();
+		$oAdWordsUser->setOAuth2Info([
+			'client_id' => '944786813080-qthio2j9k7ehtj389qpik2119iq2h6fg.apps.googleusercontent.com',
+			'client_secret' => 'VtGrXolh0wIoF5Ghh9rA53R1',
+			'refresh_token' => $sClientRefreshToken
+		]);
+		$oAdWordsUser->setDeveloperToken('T_0H1Xl94Q8Sd71tnXa5IA');
+
+		// Get Client Customer ID
+		$oCustomerService = $oAdWordsUser->GetService("CustomerService");
+		$iClientId = $oCustomerService->getCustomers()[0]->customerId;
+		
+		unset($oCustomerService);
+		
+		// Log In as NetBiz
+		$oAdWordsUser = new AdWordsUser();
+		$oAdWordsUser->setOAuth2Info([
+			'client_id' => '705349339719-ckrv85gg16ma8ej0ikseh2pin4qvvade.apps.googleusercontent.com',
+			'client_secret' => 'A1yxPW1DT4dtiP4wxguG_J5m',
+			'refresh_token' => '1/wzkYYLX4Uorw3O0n_05gyyBzjj32C8FOGgJpUm1_yRE'
+		]);
+		$oAdWordsUser->GetOAuth2Handler()->RefreshAccessToken($oAdWordsUser->GetOAuth2Info());
+		$oAdWordsUser->setDeveloperToken('T_0H1Xl94Q8Sd71tnXa5IA');
+		$oAdWordsUser->setClientCustomerId('1659226829');
+
+		// Create Pending Request
+		$oManagedCustomerService = $oAdWordsUser->GetService('ManagedCustomerService');
+		$oManagedCustomerLink = new ManagedCustomerLink();
+
+		$oManagedCustomerLink->clientCustomerId = $iClientId;
+		$oManagedCustomerLink->managerCustomerId = '3351997814';
+		$oManagedCustomerLink->linkStatus = 'PENDING';
+
+		$oOperation = new LinkOperation();
+		$oOperation->operand = $oManagedCustomerLink;
+		$oOperation->operator = 'ADD';
+
+		$oResult = $oManagedCustomerService->mutateLink([$oOperation]);
+
+		
+		// Log in as Client
+		$oAdWordsUser = new AdWordsUser();
+		$oAdWordsUser->setOAuth2Info([
+			'client_id' => '944786813080-qthio2j9k7ehtj389qpik2119iq2h6fg.apps.googleusercontent.com',
+			'client_secret' => 'VtGrXolh0wIoF5Ghh9rA53R1',
+			'refresh_token' => $sClientRefreshToken
+		]);
+		$oAdWordsUser->setDeveloperToken('T_0H1Xl94Q8Sd71tnXa5IA');
+		$oAdWordsUser->setClientCustomerId($iClientId);
+
+		// Accept Request
+		$oManagedCustomerService = $oAdWordsUser->GetService('ManagedCustomerService');
+		$oManagedCustomerLink = new ManagedCustomerLink();
+
+		$oManagedCustomerLink->clientCustomerId = $iClientId;
+		$oManagedCustomerLink->managerCustomerId = '3351997814';
+		$oManagedCustomerLink->linkStatus = 'ACTIVE';
+
+		$oOperation = new LinkOperation();
+		$oOperation->operand = $oManagedCustomerLink;
+		$oOperation->operator = 'SET';
+
+		$oResult = $oManagedCustomerService->mutateLink([$oOperation]);
+
+    } catch (Exception $e) {
+        // Error
+        $bAdWordsError = true;
+		
+		error_log($e->getMessage());
+    }
+} else {
+    // Error
+    $bAdWordsError = true;
+	error_log('invalid CODE response');
+}
+
+?>
+
+<!DOCTYPE HTML>
+<html class="no-js">
+{exp:channel:entries channel="interim_default_content" dynamic="no" limit="1" disable="categories|member_data|pagination" url_title="{if last_segment != ''}{last_segment}{/if}{if last_segment == ''}home{/if}"}
+	{if no_results}
+		{redirect="404"}
+	{/if}
+<head>
+
+{s-gbl-meta}
+{s-nb-meta}
+{s-gbl-styles}
+{s-nb-styles}
+<style>
+	@media only screen and (min-width: 680px) { main { padding-top: 80px; } }
+</style>
+
+{s-gbl-scripts-head}
+{s-nb-scripts-head}
+
+</head>
+
+<body class="page-{url_title} {if i_hero_type == "fullscreen"}fullscreen{/if}">
+
+{v-nb-tagmanager}
+<header>
+{s-nb-land-no-nav}
+{s-nb-hero}
+</header>
+<main role="main">
+    <?php if ($bAdWordsError): ?>
+    <div class="row" id="intro">
+		<div class="wrapper">
+			<div class="inner">
+				<figure><img src="/images/uploads/netbiz_content/land-adaudit-ty-error.png" /></figure>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="message">
+		<div class="inner">
+			<div class="content">
+                <h2>Oops!</h2>
+				<p>It appears there was an error. Please call us directly at <a class="tel" href="tel:{phone}">{phone}</a> and we'd be happy to assist you.</p>
+				<h4>We look forward to helping you grow your business.</h4>
+			</div>
+		</div>
+	</div>
+	<?php else: ?>
+	<div class="row" id="intro">
+		<div class="wrapper">
+			<div class="inner">
+				<figure><img src="/images/uploads/netbiz_content/land-adaudit-ty-mailbox.png" /></figure>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="message">
+		<div class="inner">
+			<div class="content">
+				<h2>SUCCESS!</h2>
+				<p>You've completed your first step towards greater ROI with your Google AdWords. Our certified analysts can now begin evaluating your account and will have your recommendations ready within 1-2 business days. You can set-up an appointment to review your evaluation now, or we can reach out to you again once your evaluation is complete.</p>
+				<h4>We look forward to helping you grow your business.</h4>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+</main>
+<footer>
+{s-nb-land-footer-blue-bar}
+{s-nb-footer}
+</footer>
+<div id="contact-overlay"></div>
+{s-gbl-scripts}
+{s-nb-scripts}
+
+</body>
+{/exp:channel:entries}
+</html>

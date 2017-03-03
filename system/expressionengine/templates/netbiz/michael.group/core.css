@@ -1,0 +1,227 @@
+/*
+==================================================
+Global
+==================================================
+*/
+
+/*
+Helper Classes
+*/
+
+.clearfix:before, .clearfix:after { display: table; content: " "; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+.hidden { display: none; }
+
+/* 
+Shared Styles
+*/
+
+html { width: 100%; height: 100%; }
+body { position: relative; width: 100%; height: 100%; background-color: rgb(255,255,255); font-style: normal; font-weight: 400; font-size: 100%; line-height: 1; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; padding: 0; margin: 0; }
+div.hr { width: 100%; height: 10px; background-color: rgb(255,255,255); border: 0; padding: 0; margin: 0; }
+hr { display: block; width: 100%; height: 0; border: 0; border-top: 0; padding: 0; margin: 0; }
+img { max-width: 100%; border: 0; }
+		
+	/* Header */
+	
+	header {
+		position: relative;
+		width: 100%;
+		background-color: transparent;
+		background-repeat: no-repeat;
+	}
+		
+		/* Page Title/Sub-Title */
+		
+		div.header-ttl {}
+		
+		/* Scroll-to-Fixed Navigation Bar */
+		
+		div.nav-wrap {
+			z-index: 100;
+			left: 0;
+			width: 100%;
+			border: 0;
+			box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
+		}
+			
+			/* Logo */
+			
+			div.logo {
+				float: left;
+				height: 100%;
+				background-color: transparent;
+				background-repeat: no-repeat;
+				background-image: url(/images/uploads/netbiz_interface/logo.png);
+			}
+
+/*
+==================================================
+Desktop - 960px +
+==================================================
+*/
+
+@media only screen and (min-width: 960px) {
+	
+	/* Header */
+	
+	header {
+		background-position: 50% 50%;
+		background-size: cover;
+		background-attachment: fixed;
+		background-image: url(/images/uploads/netbiz_hero/rainbow_stormtrooper.jpg);
+	}
+		
+		/* Page Title/Sub-Title */
+		
+		div.header-ttl {
+			position: absolute;
+			left: 0;
+			width: 66%;
+			height: 200px;
+		}
+		
+		/* Scroll-to-Fixed Navigation Bar */
+		
+		div.nav-wrap {
+			position: absolute;
+			height: 80px;
+			background-color: rgba(255,255,255,0.9);
+		}
+			
+			/* Logo */
+			
+			div.logo {
+				width: 130px;
+				background-position: -130px 50%;
+				margin: 0 20px;
+			}
+			.fixed-to-top div.logo { background-position: 0 50%; }
+			
+			/* Main Navigation */
+			
+			nav.main {
+				float: right;
+				margin: 0;
+			}
+				nav.main ul {
+					float: right;
+					list-style: none;
+					padding: 0;
+					margin: 0;
+				}
+					nav.main ul li {
+						float: left;
+						font-weight: 600;
+						font-size: 1.125rem;
+						line-height: 80px;
+						padding: 0;
+					}
+						nav.main ul li a {
+							display: block;
+							position: relative;
+							color: rgb(115,124,128);
+							text-decoration: none;
+							padding: 0 20px;
+						}
+						nav.main ul li a:hover {
+							color: rgb(10,36,51);
+						}
+						nav.main ul li:first-child a {
+							padding-left: 0;
+						}
+}
+
+/* Laptop/Tablet - 861px to 959px */
+
+@media only screen and (min-width: 861px) and (max-width: 959px) {
+		
+		/* Header */
+		
+		header {
+			background-position: 50% 50%;
+			background-size: cover;
+			background-attachment: fixed;
+			background-image: url(/images/uploads/netbiz_hero/rainbow_stormtrooper.jpg);
+		}
+			
+			/* Scroll-to-Fixed Navigation Bar */
+			
+			div.nav-wrap {
+				position: absolute;
+				height: 80px;
+				background-color: rgba(255,255,255,0.9);
+			}
+				
+				/* Logo */
+				
+				div.logo {
+					width: 130px;
+					background-position: -130px 50%;
+					margin: 0 20px;
+				}
+				.sticky-top div.logo { background-position: 0 50%; }
+				
+				/* Main Navigation */
+				
+				nav.main {
+					float: right;
+					margin: 0;
+				}
+					nav.main ul {
+						float: right;
+						list-style: none;
+						padding: 0;
+						margin: 0;
+					}
+						nav.main ul li {
+							float: left;
+							font-weight: 600;
+							font-size: 0.9375rem;
+							line-height: 80px;
+							padding: 0;
+						}
+							nav.main ul li a {
+								display: block;
+								position: relative;
+								color: rgb(115,124,128);
+								text-decoration: none;
+								padding: 0 20px;
+							}
+							nav.main ul li a:hover {
+								color: rgb(10,36,51);
+							}
+							nav.main ul li:first-child a {
+									padding-left: 0;
+							}
+}
+
+/*  */
+
+@media only screen and (min-width: 758px) and (max-width: 860px) {}
+@media only screen and (min-width: 661px) and (max-width: 757px) {}
+@media only screen and (max-width: 660px) {}
+
+
+
+div.content {
+	width: 100%;
+	background-color: rgb(204,0,0);
+	font-weight: bold;
+	font-size: 20px;
+	color: rgb(255,255,255);
+	text-align: center;
+	padding: 500px 0;
+	margin: 0;
+}
+footer {
+	width: 100%;
+	background-color: rgb(245,245,245);
+	font-weight: bold;
+	font-size: 20px;
+	color: rgb(255,255,255);
+	text-align: center;
+	padding: 50px 0;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{exp:channel:entries channel="multi_section" dynamic="no" limit="1" disable="categories|member_data|pagination" url_title="{last_segment}"}
+
+	<head>
+		
+{s-simply-head-meta}
+		
+		<meta name="description" content="{multi_section_meta_description}" />
+		
+{s-simply-head-favicons}
+		
+		<title>{if multi_section_meta_title}{multi_section_meta_title}{if:else}{title} | {simply-white-label-ppc}{/if}</title>
+		
+{s-simply-head-includes}
+		
+	</head>
+	
+	<body id="top-of-page" class="{url_title}">
+		
+		{s-simply-tag-manager}
+		
+{s-simply-body-header}
+		
+		<!-- Main -->
+		<main class="multi-section">
+			{content_sections}
+			{if content_sections:channel_short_name == 'multi_section_text_image'}
+				{s-simply-multi-section-text-image}
+			{if:elseif content_sections:channel_short_name == 'multi_section_multiple_text_image'}
+				{s-simply-multi-section-multiple-text-image}
+			{if:elseif content_sections:channel_short_name == 'multi_section_slideshow'}
+				{s-simply-multi-section-slideshow}
+			{if:elseif content_sections:channel_short_name == 'multi_section_slideshow_only'}
+				{s-simply-multi-section-slideshow-only}
+			{if:elseif content_sections:channel_short_name == 'multi_section_faq'}
+				{s-simply-multi-section-faq}
+			{/if}
+			{/content_sections}
+		</main>
+		<!-- /Main -->
+		
+{s-simply-body-footer}
+		
+{s-simply-body-includes}
+<script src="/scripts/jquery.vide.min.js"></script>
+	
+	</body>
+
+{/exp:channel:entries}
+
+</html>
